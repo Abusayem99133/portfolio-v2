@@ -1,6 +1,7 @@
 import HeroSection from "./Components/HeroSection";
 import NavBar from "./Components/NavBar";
 import NumbersSection from "./Components/NumbersSection";
+import ServicesSection from "./Components/ServicesSection";
 import ThreeBackground from "./Components/ThreeBackground";
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <HeroSection />
       <NumbersSection />
+      <ServicesSection />
     </>
   );
 }

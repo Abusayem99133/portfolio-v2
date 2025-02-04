@@ -66,3 +66,46 @@ export const Numbers = [
     title: "Years",
   },
 ];
+
+// services section
+
+export const services = [
+  {
+    id: 1,
+    title: "FRONTEND DEVELOPER",
+    description: "",
+  },
+  {
+    id: 1,
+    title: "FRONTEND DEVELOPER",
+    description: "",
+  },
+  {
+    id: 1,
+    title: "FRONTEND DEVELOPER",
+    description: "",
+  },
+];
+// skills sections
+export const skills = [
+  {
+    skill: "React",
+    percentage: 70,
+    icon: "https://img.icons8.com/office/40/react.png",
+  },
+  {
+    skill: "Node.js",
+    percentage: 30,
+    icon: "https://img.icons8.com/office/40/react.png",
+  },
+  {
+    skill: "Tailwind.CSS",
+    percentage: 90,
+    icon: "https://img.icons8.com/office/40/react.png",
+  },
+  {
+    skill: "Html",
+    percentage: 95,
+    icon: "https://img.icons8.com/office/40/react.png",
+  },
+];

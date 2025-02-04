@@ -1,3 +1,4 @@
+// hero section
 const animationDuration = 2;
 export const variants = {
   initial: { pathLength: 0, strokeOpacity: 1, fillOpacity: 0 },
@@ -40,5 +41,28 @@ export const socialIcons = [
     id: 4,
     path: `M4.98 3.5C4.98 2.12 6.1 1 7.5 1s2.5 1.12 2.5 2.5S8.9 6 7.5 6 4.98 4.88 4.98 3.5ZM2 9h5v12H2V9Zm7.5 0H14v1.75h-.06c-.58-1.1-2-2.25-4.19-2.25C8.8 8.5 6 10.25 6 13.94V21h5v-4.5c0-1.53.3-2.72 1.85-2.72 1.82 0 2.6 1.3 2.6 2.72V21h5V13.94c0-3.69-2.2-5.44-6.25-5.44-2.19 0-3.61 1.15-4.19 2.25H9.5V9Z`,
     viewBox: "0 0 24 24",
+  },
+];
+// Numbers Sections
+export const Numbers = [
+  {
+    id: 1,
+    number: 12,
+    title: "Created Projects",
+  },
+  {
+    id: 2,
+    number: 200,
+    title: "Projects",
+  },
+  {
+    id: 3,
+    number: 120,
+    title: "Happy Clients",
+  },
+  {
+    id: 4,
+    number: 5,
+    title: "Years",
   },
 ];

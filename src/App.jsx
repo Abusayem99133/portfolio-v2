@@ -1,5 +1,6 @@
 import HeroSection from "./Components/HeroSection";
 import NavBar from "./Components/NavBar";
+import NumbersSection from "./Components/NumbersSection";
 import ThreeBackground from "./Components/ThreeBackground";
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <ThreeBackground />
       <NavBar />
       <HeroSection />
+      <NumbersSection />
     </>
   );
 }

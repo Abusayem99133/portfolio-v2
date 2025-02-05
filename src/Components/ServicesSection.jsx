@@ -34,7 +34,7 @@ const ServicesSection = () => {
                 </section>
               </header>
             </section>
-            <section className="absolute w-full h-[105%] bg-gradient-to-br from-primary to-secondary animate-spin-slow opacity-60"></section>
+            <section className="absolute w-full h-[105%] bg-gradient-to-br from-primary to-secondary animate-spin-slow opacity-60 z-0"></section>
           </motion.article>
         ))}
       </section>

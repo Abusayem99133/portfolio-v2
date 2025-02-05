@@ -2,6 +2,7 @@ import HeroSection from "./Components/HeroSection";
 import NavBar from "./Components/NavBar";
 import NumbersSection from "./Components/NumbersSection";
 import ServicesSection from "./Components/ServicesSection";
+import SkillsSection from "./Components/SkillsSection";
 import ThreeBackground from "./Components/ThreeBackground";
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       <NumbersSection />
       <ServicesSection />
+      <SkillsSection />
     </>
   );
 }

@@ -76,13 +76,13 @@ export const services = [
     description: "",
   },
   {
-    id: 1,
+    id: 2,
     title: "FRONTEND DEVELOPER",
     description: "",
   },
   {
-    id: 1,
-    title: "FRONTEND DEVELOPER",
+    id: 3,
+    title: "Junior Web Developer",
     description: "",
   },
 ];
@@ -105,6 +105,11 @@ export const skills = [
   },
   {
     skill: "Html",
+    percentage: 95,
+    icon: "https://img.icons8.com/office/40/react.png",
+  },
+  {
+    skill: "CSS",
     percentage: 95,
     icon: "https://img.icons8.com/office/40/react.png",
   },

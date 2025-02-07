@@ -6,7 +6,7 @@ const SkillCircle = ({ skill, percentage, icon }) => {
   const radius = 50;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
-
+  // skill section
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}

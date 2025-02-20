@@ -114,3 +114,49 @@ export const skills = [
     icon: "https://img.icons8.com/office/40/react.png",
   },
 ];
+
+// Experience And Education
+export const experience = [
+  {
+    id: 1,
+    title: "Full Stack Developer",
+    company: "Stelleronix",
+    year: "22/11/2024-10/02/2025",
+    description: "It was my fast experience in real world",
+    icon: "https:/img.icons8.com/ios-filled/64/ffffff/briefcace-settings-png",
+  },
+  {
+    id: 2,
+    title: "Full Stack Developer",
+    company: "Stelleronix",
+    year: "22/11/2024-10/02/2025",
+    description: "It was my fast experience in real world",
+    icon: "https:/img.icons8.com/ios-filled/64/ffffff/briefcace-settings-png",
+  },
+  {
+    id: 3,
+    title: "Full Stack Developer",
+    company: "Stelleronix",
+    year: "22/11/2024-10/02/2025",
+    description: "It was my fast experience in real world",
+    icon: "https:/img.icons8.com/ios-filled/64/ffffff/briefcace-settings-png",
+  },
+];
+export const education = [
+  {
+    id: 1,
+    degree: "Full Stack Developer",
+    institution: "Stelleronix",
+    year: "22/11/2024-10/02/2025",
+    details: "It was my fast experience in real world",
+    icon: "https:/img.icons8.com/pastel-glyph/64/ffffff/graduation-cap--v2.png",
+  },
+  {
+    id: 2,
+    degree: "Full Stack Developer",
+    institution: "Stelleronix",
+    year: "22/11/2024-10/02/2025",
+    details: "It was my fast experience in real world",
+    icon: "https:/img.icons8.com/pastel-glyph/64/ffffff/graduation-cap--v2.png",
+  },
+];

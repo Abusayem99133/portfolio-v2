@@ -1,3 +1,4 @@
+import EducationAndExperience from "./Components/EducationAndExperience";
 import HeroSection from "./Components/HeroSection";
 import NavBar from "./Components/NavBar";
 import NumbersSection from "./Components/NumbersSection";
@@ -11,8 +12,9 @@ function App() {
       <NavBar />
       <HeroSection />
       <NumbersSection />
-      <ServicesSection />
-      <SkillsSection />
+      {/* <ServicesSection />
+      <SkillsSection /> */}
+      <EducationAndExperience />
     </>
   );
 }

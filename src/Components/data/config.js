@@ -183,3 +183,26 @@ export const projects = [
     imageUrl: "/src/assets/429735264_423513153413390_5614728519074567498_n.jpg",
   },
 ];
+
+// Contact Us
+
+export const contactData = [
+  {
+    id: 1,
+    title: "Address",
+    description: "it was very lowest score",
+    icon: "https://img.icons8.com/ios-filled/50/ffffff/address--v1.png",
+  },
+  {
+    id: 2,
+    title: "Phone Number",
+    description: "+8801765199133/+8801814082602(whatsapp)",
+    icon: "https://img.icons8.com/ios-filled/50/ffffff/phone.png",
+  },
+  {
+    id: 3,
+    title: "Email",
+    description: "sayem99133@gmail.com",
+    icon: "https://img.icons8.com/pastel-glyph/50/ffffff/new-post--v1.png",
+  },
+];

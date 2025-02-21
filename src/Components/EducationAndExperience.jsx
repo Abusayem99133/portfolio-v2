@@ -11,13 +11,28 @@ const sectionItem = ({ title, subtitle, year, details, icon }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
     viewport={{ once: false }}
-  ></motion.article>
+  >
+    <section className="bg-black z-20 text-white rounded-xl">
+      <section className="border border-primary bg-[#ffffff29] rounded-xl p-3 flex items-center ">
+        <img src={icon} alt="icon" width={64} height={64} />
+        <div className="mt-10">
+          <h3 className="text-xl font-semibold">{title}</h3>
+          <p className="text-sm "> {subtitle}</p>
+          <p className=" text-sm italic">{year}</p>
+          {details && <p className="mt-2"> {details}</p>}
+        </div>
+      </section>
+    </section>
+  </motion.article>
 );
 const EducationAndExperience = () => {
   return (
-    <div>
-      <h1>Education And Experience</h1>
-    </div>
+    <section
+      className="relative container mx-auto px-4 py-12 lg:p-16"
+      id="experience"
+    >
+      <CustomTitle text="Education & Experience " />
+    </section>
   );
 };
 

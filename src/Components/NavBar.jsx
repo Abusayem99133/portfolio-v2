@@ -14,13 +14,14 @@ const Path = (props) => (
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scope, animate] = useAnimate();
+
   useEffect(() => {
     const menuAnimations = isOpen
       ? [
           ["nav", { transform: "translateX(0%)" }, { duration: 0.6 }],
           [
             "li",
-            { transform: "scale(1)", opacity: 1, filter: "blur(0px)" }, // <-- এখানে ঠিক করা হয়েছে
+            { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
             { delay: stagger(0.05), at: "-0.1" },
           ],
         ]
@@ -33,7 +34,6 @@ const NavBar = () => {
           ["nav", { transform: "translateX(-100%)" }, { at: "-0.1" }],
         ];
 
-    // animate path and menu
     animate([
       [
         "path.top",
@@ -49,13 +49,17 @@ const NavBar = () => {
       ...menuAnimations,
     ]);
   }, [isOpen, animate]);
+
   const handleNavItemClick = (sectionId) => {
     setIsOpen(false);
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 300); // Adjust the delay as needed
   };
+
   const NavItems = [
     { id: "services", text: "what i offer?" },
     { id: "skills", text: "My Skills" },
@@ -63,6 +67,7 @@ const NavBar = () => {
     { id: "work", text: "My Work" },
     { id: "contact", text: "Contact" },
   ];
+
   return (
     <div className="relative flex justify-between px-12 py-2">
       <div ref={scope} className="relative">
@@ -79,20 +84,16 @@ const NavBar = () => {
         <nav
           className={`fixed top-0 left-0 h-full w-72 z-30 flex items-center bg-gradient-to-br from-primary to-secondary transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300
-        `}
+          } transition-transform duration-300`}
         >
-          <ul className=" flex flex-col p-6">
-            {NavItems?.map((item) => (
-              <li
-                key={item?.id}
-                className="text-white text-4xl font-bold mt-10"
-              >
+          <ul className="flex flex-col p-6">
+            {NavItems.map((item) => (
+              <li key={item.id} className="text-white text-4xl font-bold mt-10">
                 <a
-                  href={`#${item?.id}`}
-                  onClick={() => handleNavItemClick(item?.id)}
+                  href={`#${item.id}`}
+                  onClick={() => handleNavItemClick(item.id)}
                 >
-                  {item?.text}
+                  {item.text}
                 </a>
               </li>
             ))}

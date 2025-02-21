@@ -2,28 +2,36 @@ import { useState, useRef, useEffect } from "react";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { Numbers } from "./data/config";
+
 const NumbersSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        // যখন সেকশনটি ভিউপোর্টে দেখা যায়, তখন isVisible ট্রু করুন
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+        } else {
+          // যখন সেকশনটি ভিউপোর্ট থেকে বের হয়, তখন isVisible ফ্যালস করুন
+          setIsVisible(false);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 } // 10% ভিউপোর্টে দেখা গেলে ট্রিগার হবে
     );
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
+
   return (
     <section className="mx-auto w-full relative text-white mt-40 flex justify-center">
       <header className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#007cda] via-[#785ae4] to-primary opacity-15 blur-[40px] left-10 top-0 hidden md:block"></header>

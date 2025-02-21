@@ -12,7 +12,8 @@ function App() {
       <NavBar />
       <HeroSection />
       <NumbersSection />
-      {/* <ServicesSection />
+      <ServicesSection />
+      {/* 
       <SkillsSection /> */}
       <EducationAndExperience />
     </>

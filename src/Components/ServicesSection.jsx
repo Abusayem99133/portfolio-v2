@@ -13,7 +13,7 @@ const ServicesSection = () => {
           <motion.article
             key={item.id}
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }} // ✅ একবার অ্যানিমেট হবে, স্ক্রল করলে হাইড হবে না
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.8,
               ease: "easeIn",

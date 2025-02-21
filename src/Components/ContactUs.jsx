@@ -20,9 +20,9 @@ const ContactUs = () => {
             <motion.article
               key={data?.id}
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
               className="mb-20"
             >
               <div className="bg-black z-20 md:w-11/12 w-full text-white rounded-xl">
@@ -42,6 +42,57 @@ const ContactUs = () => {
             </motion.article>
           ))}
         </section>
+        <motion.article
+          transition={{ duration: 0.5, delay: 0.6 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <form action="" className="space-y-6">
+            <section className="mx-auto rounded-xl max-w-lg">
+              <div className="gird grid-cols-1 gap-4">
+                <label htmlFor="name" className="block border-b">
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    placeholder="Your Name"
+                    className="appearance-none bg-transparent border-none w-full py-2 px-3 leading-tight focus-within:outline-none text-lg font-medium"
+                  />
+                </label>
+                <label htmlFor="email" className="block border-b">
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="Your Email"
+                    className="appearance-none bg-transparent border-none w-full py-2 px-3 leading-tight focus-within:outline-none text-lg font-medium"
+                  />
+                </label>
+                <label htmlFor="phone" className="block border-b">
+                  <input
+                    type="tel"
+                    id="phone"
+                    required
+                    placeholder="Your Phone Number"
+                    className="appearance-none bg-transparent border-none w-full py-2 px-3 leading-tight focus-within:outline-none text-lg font-medium"
+                  />
+                </label>
+                <label htmlFor="Message" className="block border-b">
+                  <textarea
+                    rows="4"
+                    id="message"
+                    required
+                    placeholder="Message"
+                    className="appearance-none bg-transparent border-none w-full py-2 px-3 leading-tight focus-within:outline-none text-lg font-medium"
+                  ></textarea>
+                </label>
+                <div className="text-center">
+                  <InteractiveButton text={"Send Message"} className="w-full" />
+                </div>
+              </div>
+            </section>
+          </form>
+        </motion.article>
       </section>
     </article>
   );

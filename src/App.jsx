@@ -1,3 +1,4 @@
+import ContactUs from "./Components/ContactUs";
 import EducationAndExperience from "./Components/EducationAndExperience";
 import HeroSection from "./Components/HeroSection";
 import NavBar from "./Components/NavBar";
@@ -18,6 +19,7 @@ function App() {
       <SkillsSection />
       <EducationAndExperience />
       <ProjectSection />
+      <ContactUs />
     </>
   );
 }

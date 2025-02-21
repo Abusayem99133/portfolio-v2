@@ -166,20 +166,20 @@ export const projects = [
     title: "Project 1",
     description:
       "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/public/img/download (3).png",
+    imageUrl: "/src/assets/Gemini_Generated_Image_2v2pjn2v2pjn2v2p.jpeg",
   },
   {
     id: 2,
     title: "Project 2",
     description:
       "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/public/img/download (2).png",
+    imageUrl: "/src/assets/download (2).png",
   },
   {
     id: 3,
     title: "Project 3",
     description:
       "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/public/img/429735264_423513153413390_5614728519074567498_n.jpg",
+    imageUrl: "/src/assets/429735264_423513153413390_5614728519074567498_n.jpg",
   },
 ];

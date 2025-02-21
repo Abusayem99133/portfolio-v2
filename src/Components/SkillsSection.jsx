@@ -6,12 +6,11 @@ const SkillCircle = ({ skill, percentage, icon }) => {
   const radius = 50;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
-  // skill section
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
+      animate={{ opacity: 1, y: 0 }} // ✅ একবার অ্যানিমেট হবে, স্ক্রল করলে হাইড হবে না
       transition={{ duration: 1 }}
       className="relative flex flex-col items-center"
     >
@@ -50,19 +49,20 @@ const SkillCircle = ({ skill, percentage, icon }) => {
 const SkillsSection = () => {
   return (
     <section className="relative" id="skills">
+      {/* Background Effect */}
       <header className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#007cda] via-[#785ae4] to-primary opacity-20 blur-[100px] left-10 top-0 hidden md:block"></header>
       <header className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#007cda] via-[#785ae4] to-primary opacity-20 blur-[100px] right-10 bottom-0 hidden md:block"></header>
 
       <CustomTitle title={"My Skills"} />
 
+      {/* Skill List */}
       <section className="grid grid-cols-2 md:grid-cols-5 gap-6 lg:gap-8 p-5 text-white mt-32">
         {skills.map((item, index) => (
           <motion.article
             key={item.id}
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }} // ✅ একবার অ্যানিমেট হবে, স্ক্রল করলে হাইড হবে না
             transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.3 }}
-            viewport={{ once: true, amount: 0.5 }}
           >
             <SkillCircle
               skill={item.skill}

@@ -13,8 +13,8 @@ function App() {
       <HeroSection />
       <NumbersSection />
       <ServicesSection />
-      {/* 
-      <SkillsSection /> */}
+
+      <SkillsSection />
       <EducationAndExperience />
     </>
   );

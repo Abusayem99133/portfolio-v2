@@ -122,7 +122,15 @@ export const skills = [
 export const experience = [
   {
     id: 1,
-    title: "Full Stack Developer",
+    title: "Junior Full Stack Developer",
+    company: "Stelleronix",
+    year: "2024-11-22 - 2025-02-10",
+    description: "It was my first experience in the real world",
+    icon: "https://img.icons8.com/ios-filled/64/ffffff/briefcase-settings.png",
+  },
+  {
+    id: 2,
+    title: "Junior Full Stack Developer",
     company: "Stelleronix",
     year: "2024-11-22 - 2025-02-10",
     description: "It was my first experience in the real world",
@@ -135,9 +143,17 @@ export const education = [
   {
     id: 1,
     degree: "Full Stack Developer",
-    institution: "Stelleronix",
-    year: "2024-11-22 - 2025-02-10",
-    details: "It was my first experience in the real world",
+    institution: "Programming Hero ",
+    year: "31-12-2023 to 01-07-2024",
+    details: "It was my first experience in the Programming sector",
+    icon: "https://img.icons8.com/pastel-glyph/64/ffffff/graduation-cap--v2.png",
+  },
+  {
+    id: 2,
+    degree: "Full Stack Developer",
+    institution: "Programming Hero ",
+    year: "31-12-2023 to 01-07-2024",
+    details: "It was my first experience in the Programming sector",
     icon: "https://img.icons8.com/pastel-glyph/64/ffffff/graduation-cap--v2.png",
   },
   // Add other education entries

@@ -13,13 +13,12 @@ const ServicesSection = () => {
           <motion.article
             key={item.id}
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }} // ✅ একবার অ্যানিমেট হবে, স্ক্রল করলে হাইড হবে না
             transition={{
               duration: 0.8,
-              ease: "easeOut",
+              ease: "easeIn",
               delay: index * 0.5,
             }}
-            viewport={{ once: true, amount: 0.5 }}
             className="relative w-full h-[350px] p-5 grid place-items-center overflow-hidden rounded-[20px] shadow-lg"
           >
             <section className="absolute w-[95%] h-[95%] bg-black rounded-[20px] z-10 text-center text-white">

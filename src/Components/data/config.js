@@ -158,3 +158,28 @@ export const education = [
   },
   // Add other education entries
 ];
+
+// Project section
+export const projects = [
+  {
+    id: 1,
+    title: "Project 1",
+    description:
+      "It was my first experience in the real world It was my first experience in the real world",
+    imageUrl: "/public/img/download (3).png",
+  },
+  {
+    id: 2,
+    title: "Project 2",
+    description:
+      "It was my first experience in the real world It was my first experience in the real world",
+    imageUrl: "/public/img/download (2).png",
+  },
+  {
+    id: 3,
+    title: "Project 3",
+    description:
+      "It was my first experience in the real world It was my first experience in the real world",
+    imageUrl: "/public/img/429735264_423513153413390_5614728519074567498_n.jpg",
+  },
+];

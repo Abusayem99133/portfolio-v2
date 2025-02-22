@@ -5,7 +5,7 @@ import SocialButton from "./SocialButton";
 const HeroSection = () => {
   const handleDownloadResume = () => {
     const resumeUrl =
-      "https://drive.google.com/file/d/1yr0XJ_KgjkhBMvvt9wYwFOu4y_3egHFY/view?usp=sharing"; // তোমার রেজুমের সঠিক লিংক এখানে দাও
+      "https://drive.google.com/uc?export=download&id=1yr0XJ_KgjkhBMvvt9wYwFOu4y_3egHFY"; // তোমার রেজুমের সঠিক লিংক এখানে দাও
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Md_Rokonuzzaman_Sayem_Resume.pdf";

@@ -47,22 +47,22 @@ export const socialIcons = [
 export const Numbers = [
   {
     id: 1,
-    number: 12,
+    number: 11,
     title: "Created Projects",
   },
   {
     id: 2,
-    number: 200,
+    number: 50,
     title: "Projects",
   },
   {
     id: 3,
-    number: 120,
+    number: 2,
     title: "Happy Clients",
   },
   {
     id: 4,
-    number: 5,
+    number: 2,
     title: "Years",
   },
 ];
@@ -72,20 +72,27 @@ export const Numbers = [
 export const services = [
   {
     id: 1,
-    title: "FRONTEND DEVELOPER",
+    title: "JUNIOR FRONTEND DEVELOPER",
     description:
-      "Specializing in building responsive and user-friendly interfaces.",
+      "I’m a Junior Frontend Developer skilled in HTML, CSS, JavaScript, and React.js, focused on building responsive, user-friendly websites. I’m passionate about learning new technologies and improving my skills.",
   },
   {
     id: 2,
-    title: "BACKEND DEVELOPER",
-    description: "Experienced in creating robust server-side applications.",
+    title: "MERN STACK DEVELOPER",
+    description:
+      "I’m a passionate MERN Stack Developer with experience in building dynamic web applications using MongoDB, Express.js, React.js, and Node.js. I focus on creating high-performance, secure, and user-friendly solutions tailored to client needs.",
   },
   {
     id: 3,
-    title: "Junior Web Developer",
+    title: "JUNIOR WEB DEVELOPER",
     description:
-      "Passionate about learning and contributing to web development projects.",
+      "I’m a Junior Web Developer skilled in HTML, CSS, JavaScript, and React.js, with a focus on building responsive and user-friendly websites. Eager to learn and grow, I strive to enhance my skills and deliver high-quality web solutions.",
+  },
+  {
+    id: 4,
+    title: "JUNIOR FULLSTACK DEVELOPER",
+    description:
+      "I’m a Junior Fullstack Developer with experience in both frontend and backend technologies, including React.js, Node.js, Express.js, and MongoDB. Passionate about creating dynamic and scalable web applications, I focus on delivering seamless user experiences and high-quality code.",
   },
 ];
 // skills sections
@@ -94,6 +101,11 @@ export const skills = [
     skill: "React",
     percentage: 70,
     icon: "https://img.icons8.com/office/40/react.png",
+  },
+  {
+    skill: "JavaScript",
+    percentage: 55,
+    icon: "https://img.icons8.com/office/40/javascript.png",
   },
   {
     skill: "Node.js",
@@ -125,15 +137,17 @@ export const experience = [
     title: "Junior Full Stack Developer",
     company: "Stelleronix",
     year: "2024-11-22 - 2025-02-10",
-    description: "It was my first experience in the real world",
+    description:
+      "At Stelleronix, I completed my first real-world project as a Junior Full Stack Developer. I built a dynamic web application using MongoDB, Express.js, React.js, and Node.js, focusing on user-friendly design, security, and performance. This project boosted my skills in both front-end and back-end development.",
     icon: "https://img.icons8.com/ios-filled/64/ffffff/briefcase-settings.png",
   },
   {
     id: 2,
-    title: "Junior Full Stack Developer",
+    title: "Frontend Developer",
     company: "Stelleronix",
-    year: "2024-11-22 - 2025-02-10",
-    description: "It was my first experience in the real world",
+    year: "22-01-2025 - 10-02-2025",
+    description:
+      "As a Frontend Developer, I created a dynamic website focusing on a seamless user experience. Using HTML, CSS, JavaScript, and React.js, I ensured the website is responsive, interactive, and visually appealing across devices. The project helped me enhance my skills in frontend technologies and UI/UX design.",
     icon: "https://img.icons8.com/ios-filled/64/ffffff/briefcase-settings.png",
   },
   // Add other experiences
@@ -142,20 +156,23 @@ export const experience = [
 export const education = [
   {
     id: 1,
-    degree: "Full Stack Developer",
-    institution: "Programming Hero ",
-    year: "31-12-2023 to 01-07-2024",
-    details: "It was my first experience in the Programming sector",
+    degree: "HSC(Humanities)",
+    institution: "Chandona High School and College",
+    year: "10-2-2018 to 15-12-2021",
+    details:
+      "Chandona High School and College provided a wonderful environment for student life. I had a beautiful and memorable experience during my time there, with a focus on learning and personal growth. My first college life was truly special and enriching.",
     icon: "https://img.icons8.com/pastel-glyph/64/ffffff/graduation-cap--v2.png",
   },
   {
     id: 2,
-    degree: "Full Stack Developer",
-    institution: "Programming Hero ",
-    year: "31-12-2023 to 01-07-2024",
-    details: "It was my first experience in the Programming sector",
+    degree: "BSS(Political Science)",
+    institution: "Bhawal Mirzapur College",
+    year: "12-3-2023 to present",
+    details:
+      "I study at Mirzapur College, where the environment is beautiful and supportive of both academic and personal growth. I'm enjoying my time here and look forward to learning more.",
     icon: "https://img.icons8.com/pastel-glyph/64/ffffff/graduation-cap--v2.png",
   },
+
   // Add other education entries
 ];
 
@@ -165,15 +182,15 @@ export const projects = [
     id: 1,
     title: "Project 1",
     description:
-      "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/src/assets/Gemini_Generated_Image_2v2pjn2v2pjn2v2p.jpeg",
+      "A CRM (Customer Relationship Management) system is a software solution designed to help businesses manage interactions with customers, streamline processes, and improve customer relationships. It typically includes features for managing sales, marketing, customer support, and data analysis. By centralizing customer data, a CRM system allows businesses to improve communication, track customer activity, and make informed decisions",
+    imageUrl: "/src/assets/Screenshot - 2025-02-22T193226.693.png",
   },
   {
     id: 2,
     title: "Project 2",
     description:
       "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/src/assets/download (2).png",
+    imageUrl: "/src/assets/Screenshot - 2025-02-22T193226.693.png",
   },
   {
     id: 3,
@@ -190,7 +207,7 @@ export const contactData = [
   {
     id: 1,
     title: "Address",
-    description: "it was very lowest score",
+    description: "Sirajganj Sadar(6700), Rajshahi,Dhaka, Bangladesh",
     icon: "https://img.icons8.com/ios-filled/50/ffffff/address--v1.png",
   },
   {

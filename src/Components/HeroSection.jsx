@@ -1,7 +1,19 @@
 import { motion } from "framer-motion";
 import InteractiveButton from "./InteractiveButton";
 import SocialButton from "./SocialButton";
+
 const HeroSection = () => {
+  const handleDownloadResume = () => {
+    const resumeUrl =
+      "https://drive.google.com/file/d/1yr0XJ_KgjkhBMvvt9wYwFOu4y_3egHFY/view?usp=sharing"; // তোমার রেজুমের সঠিক লিংক এখানে দাও
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "Md_Rokonuzzaman_Sayem_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative w-full">
       <header className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#007cda] via-[#785ae4] to-primary opacity-15 blur-[40px] left-10 top-0 hidden md:block"></header>
@@ -13,7 +25,7 @@ const HeroSection = () => {
             <section className="ml-0 md:ml-12">
               <header className="text-center lg:text-left">
                 <h1 className="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-                  Hi, I'm {""}
+                  Hi, I'm{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
                     Md. Rokonuzzaman Sayem
                   </span>
@@ -29,6 +41,7 @@ const HeroSection = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   className="flex items-center px-4 py-2 bg-transparent text-primary border border-primary rounded-3xl"
+                  onClick={handleDownloadResume}
                 >
                   <svg viewBox="0 0 24 24" width={40} height={40} fill="none">
                     <motion.path

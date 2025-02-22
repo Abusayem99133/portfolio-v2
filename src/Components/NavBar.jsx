@@ -16,52 +16,45 @@ const NavBar = () => {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    const menuAnimations = isOpen
-      ? [
-          ["nav", { transform: "translateX(0%)" }, { duration: 0.6 }],
-          [
-            "li",
-            { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
-            { delay: stagger(0.05), at: "-0.1" },
-          ],
-        ]
-      : [
-          [
-            "li",
-            { transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
-            { delay: stagger(0.05, { from: "last" }), at: "<" },
-          ],
-          ["nav", { transform: "translateX(-100%)" }, { at: "-0.1" }],
-        ];
-
+    if (!isOpen) return;
     animate([
+      ["path.top", { d: "M 3 16.5 L 17 2.5" }, { at: "<" }],
+      ["path.middle", { opacity: 0 }, { at: "<" }],
+      ["path.bottom", { d: "M 3 2.5 L 17 16.346" }, { at: "<" }],
+      ["nav", { transform: "translateX(0%)" }, { duration: 0.6 }],
       [
-        "path.top",
-        { d: isOpen ? "M 3 16.5 L 17 2.5" : "M 2 2.5 L 20 2.5" },
-        { at: "<" },
+        "li",
+        { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
+        { delay: stagger(0.05), at: "-0.1" },
       ],
-      ["path.middle", { opacity: isOpen ? 0 : 1 }, { at: "<" }],
-      [
-        "path.bottom",
-        { d: isOpen ? "M 3 2.5 L 17 16.346" : "M 2 16.346 L 20 16.346" },
-        { at: "<" },
-      ],
-      ...menuAnimations,
     ]);
-  }, [isOpen, animate]);
+  }, [animate]);
 
   const handleNavItemClick = (sectionId) => {
     setIsOpen(false);
+
     setTimeout(() => {
       document.getElementById(sectionId)?.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-    }, 300); // Adjust the delay as needed
+    }, 300); // 300ms wait দাও যেন animation শেষ হয়
   };
 
+  // Close menu when scrolling is done
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const NavItems = [
-    { id: "services", text: "what i offer?" },
+    { id: "services", text: "What I Offer?" },
     { id: "skills", text: "My Skills" },
     { id: "experience", text: "Education & Experience" },
     { id: "work", text: "My Work" },
@@ -72,7 +65,7 @@ const NavBar = () => {
     <div className="relative flex justify-between px-12 py-2">
       <div ref={scope} className="relative">
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen((prev) => !prev)}
           className="absolute top-4 z-40 left-4 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
         >
           <svg width={23} height={18} viewBox="0 0 23 18">
@@ -84,7 +77,7 @@ const NavBar = () => {
         <nav
           className={`fixed top-0 left-0 h-full w-72 z-30 flex items-center bg-gradient-to-br from-primary to-secondary transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300`}
+          } transition-transform duration-500`}
         >
           <ul className="flex flex-col p-6">
             {NavItems.map((item) => (
@@ -100,8 +93,8 @@ const NavBar = () => {
           </ul>
         </nav>
       </div>
-      <h1 className="font-bold text-2xl text-white top-8 right-8 p-8 lg:top-12 lg:pr-16">
-        LOGO
+      <h1 className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary top-8 right-8 p-8 lg:top-12 lg:pr-16">
+        MRS
       </h1>
     </div>
   );

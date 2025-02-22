@@ -13,13 +13,13 @@ const HeroSection = () => {
             <section className="ml-0 md:ml-12">
               <header className="text-center lg:text-left">
                 <h1 className="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-                  Hi, I'm
+                  Hi, I'm {""}
                   <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
                     Md. Rokonuzzaman Sayem
                   </span>
                 </h1>
               </header>
-              <p className="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-[370px] md:max-w-xl">
+              <p className="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-[370px] md:max-w-xl text-xl font-bold">
                 Frontend Developer
               </p>
               <section className="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:mx-auto lg:mx-0">

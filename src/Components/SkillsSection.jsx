@@ -59,7 +59,7 @@ const SkillsSection = () => {
       <section className="grid grid-cols-2 md:grid-cols-5 gap-6 lg:gap-8 p-5 text-white mt-32">
         {skills.map((item, index) => (
           <motion.article
-            key={item.id}
+            key={item?.id}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }} // ✅ একবার অ্যানিমেট হবে, স্ক্রল করলে হাইড হবে না
             transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.3 }}

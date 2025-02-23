@@ -7,19 +7,19 @@ export default function ProjectSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    if (!projects?.length) return;
+    if (projects.length === 0) return;
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
   const prevSlide = () => {
-    if (!projects?.length) return;
+    if (projects.length === 0) return;
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
 
   useEffect(() => {
-    console.log("current index updated:", currentIndex);
+    console.log("Current Index Updated:", currentIndex);
   }, [currentIndex]);
 
   return (
@@ -44,35 +44,37 @@ export default function ProjectSection() {
             />
           </button>
         </nav>
+
         <article className="relative w-full h-screen flex items-center justify-center">
           <AnimatePresence mode="wait">
-            <motion.article
-              key={currentIndex}
-              initial={{ opacity: 0, scale: 0.9, x: 50 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              exit={{ opacity: 0, scale: 0.8, x: -50, position: "absolute" }}
-              transition={{
-                duration: 0.5,
-                type: "spring",
-                bounce: 0.2,
-              }}
-              className="absolute w-[80%] h-full p-6 border border-primary bg-[#ffffff29] rounded-3xl text-white shadow-lg"
-            >
-              <img
-                src={projects[currentIndex]?.imageUrl}
-                alt={projects[currentIndex]?.title}
-                className="w-full h-[500px] object-cover rounded-t-lg mb-4"
-              />
-              <h2 className="uppercase text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
-                {projects[currentIndex]?.title}
-              </h2>
-              <p className="text-md mt-2 ">
-                {" "}
-                {projects[currentIndex]?.description}
-              </p>
-            </motion.article>
+            {projects.length > 0 && (
+              <motion.article
+                key={currentIndex} // **Fixed Key Issue**
+                initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.8, x: -50 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut", // ✅ Corrected Ease
+                }}
+                className="absolute w-[80%] h-full p-6 border border-primary bg-[#ffffff29] rounded-3xl text-white shadow-lg"
+              >
+                <img
+                  src={projects[currentIndex]?.imageUrl}
+                  alt={projects[currentIndex]?.title}
+                  className="w-full h-[500px] object-cover rounded-t-lg mb-4"
+                />
+                <h2 className="uppercase text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
+                  {projects[currentIndex]?.title}
+                </h2>
+                <p className="text-md mt-2">
+                  {projects[currentIndex]?.description}
+                </p>
+              </motion.article>
+            )}
           </AnimatePresence>
         </article>
+
         <nav>
           <button
             onClick={nextSlide}

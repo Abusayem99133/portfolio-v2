@@ -5,10 +5,11 @@ const BackToTop = () => {
   const { scrollYProgress } = useScroll();
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
-    return scrollYProgress?.onChange((latest) => {
+    return scrollYProgress?.on("change", (latest) => {
       setShowButton(latest > 0.05);
     });
   }, [scrollYProgress]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

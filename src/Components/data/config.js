@@ -98,31 +98,37 @@ export const services = [
 // skills sections
 export const skills = [
   {
+    id: 1,
     skill: "React",
     percentage: 70,
     icon: "https://img.icons8.com/office/40/react.png",
   },
+  // {
+  //   id:2,
+  //   skill: "JavaScript",
+  //   percentage: 55,
+  //   icon: "https://img.icons8.com/office/40/javascript.png",
+  // },
   {
-    skill: "JavaScript",
-    percentage: 55,
-    icon: "https://img.icons8.com/office/40/javascript.png",
-  },
-  {
+    id: 2,
     skill: "Node.js",
     percentage: 30,
     icon: "https://img.icons8.com/color/48/nodejs.png",
   },
   {
+    id: 3,
     skill: "Tailwind.CSS",
     percentage: 90,
     icon: "https://img.icons8.com/color/48/tailwindcss.png",
   },
   {
+    id: 4,
     skill: "Html",
     percentage: 95,
     icon: "https://img.icons8.com/color/48/html-5.png",
   },
   {
+    id: 5,
     skill: "CSS",
     percentage: 95,
     icon: "https://img.icons8.com/color/48/css3.png",
@@ -195,6 +201,13 @@ export const projects = [
   {
     id: 3,
     title: "Project 3",
+    description:
+      "It was my first experience in the real world It was my first experience in the real world",
+    imageUrl: "/src/assets/429735264_423513153413390_5614728519074567498_n.jpg",
+  },
+  {
+    id: 4,
+    title: "Project 4",
     description:
       "It was my first experience in the real world It was my first experience in the real world",
     imageUrl: "/src/assets/429735264_423513153413390_5614728519074567498_n.jpg",

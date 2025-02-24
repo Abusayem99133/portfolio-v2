@@ -49,13 +49,13 @@ export default function ProjectSection() {
           <AnimatePresence mode="wait">
             {projects.length > 0 && (
               <motion.article
-                key={currentIndex} // **Fixed Key Issue**
-                initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                exit={{ opacity: 0, scale: 0.8, x: -50 }}
+                key={currentIndex}
+                initial={{ opacity: 0, scale: 0.9, x: 50, y: 20 }}
+                animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+                exit={{ opacity: 0, scale: 0.8, x: -50, y: -20 }}
                 transition={{
                   duration: 0.5,
-                  ease: "easeInOut", // ✅ Corrected Ease
+                  ease: [0.33, 1, 0.68, 1], // Custom cubic bezier easing
                 }}
                 className="absolute w-[80%] h-full p-6 border border-primary bg-[#ffffff29] rounded-3xl text-white shadow-lg"
               >

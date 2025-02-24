@@ -16,7 +16,7 @@ const ServicesSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.8,
-              ease: "easeIn",
+              ease: [0.42, 0, 0.58, 1], // ✅ Valid cubic bezier array
               delay: index * 0.5,
             }}
             className="relative w-full h-[350px] p-5 grid place-items-center overflow-hidden rounded-[20px] shadow-lg"

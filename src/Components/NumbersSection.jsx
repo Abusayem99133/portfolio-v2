@@ -40,7 +40,7 @@ const NumbersSection = () => {
         ref={sectionRef}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }} // ✅ Valid cubic bezier array
         viewport={{ once: true, amount: 0.5 }}
         className="relative z-10 mx-auto w-11/12 lg:mx-0 p-5 sm:p-6 py-6 sm:py-8 rounded-3xl border border-primary bg-[#ffffff29] shadow-lg md:divide-x divide-primary grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-6 lg:gap-12"
       >

@@ -196,21 +196,21 @@ export const projects = [
     title: "Project 2",
     description:
       "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/src/assets/Screenshot - 2025-02-22T193226.693.png",
+    imageUrl: "/src/assets/Gemini_Generated_Image_2v2pjn2v2pjn2v2p.jpeg",
   },
   {
     id: 3,
     title: "Project 3",
     description:
-      "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/src/assets/429735264_423513153413390_5614728519074567498_n.jpg",
+      "It was my first experience in the real world It was my first experience in the real time",
+    imageUrl: "/src/assets/WhatsApp Image 2025-02-04 at 21.40.47_9232240d.jpg",
   },
   {
     id: 4,
     title: "Project 4",
     description:
-      "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/src/assets/429735264_423513153413390_5614728519074567498_n.jpg",
+      "It was my first experience in the real world It was my first experience in the real world time",
+    imageUrl: "/src/assets/Photo-59439169-eb20-102b-811a-b16f182a8c3f.jpg",
   },
 ];
 

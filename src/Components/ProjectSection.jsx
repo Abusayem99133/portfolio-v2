@@ -7,12 +7,12 @@ export default function ProjectSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    if (projects.length === 0) return;
+    if (!projects || projects.length === 0) return;
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
   const prevSlide = () => {
-    if (projects.length === 0) return;
+    if (!projects || projects.length === 0) return;
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
@@ -20,7 +20,14 @@ export default function ProjectSection() {
 
   useEffect(() => {
     console.log("Current Index Updated:", currentIndex);
+    console.log("Showing Project:", projects[currentIndex]); // ✅ Check data
   }, [currentIndex]);
+
+  if (!projects || projects.length === 0) {
+    return (
+      <p className="text-center text-white text-lg">Loading projects...</p>
+    );
+  }
 
   return (
     <>
@@ -28,9 +35,11 @@ export default function ProjectSection() {
         <CustomTitle className="mt-44" title={"My Work"} />
       </header>
       <article className="relative flex h-full justify-center items-center w-full p-4 mt-32">
+        {/* Background Gradient Effects */}
         <header className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#007cda] via-[#785ae4] to-primary opacity-15 blur-[40px] left-10 top-0 hidden md:block"></header>
         <header className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#007cda] via-[#785ae4] to-primary opacity-15 blur-[40px] right-10 bottom-0 hidden md:block"></header>
 
+        {/* Previous Button */}
         <nav>
           <button
             onClick={prevSlide}
@@ -45,18 +54,16 @@ export default function ProjectSection() {
           </button>
         </nav>
 
+        {/* Main Project Display */}
         <article className="relative w-full h-screen flex items-center justify-center">
           <AnimatePresence mode="wait">
             {projects.length > 0 && (
               <motion.article
-                key={currentIndex}
+                key={projects[currentIndex]?.title || currentIndex}
                 initial={{ opacity: 0, scale: 0.9, x: 50, y: 20 }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, x: -50, y: -20 }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.33, 1, 0.68, 1], // Custom cubic bezier easing
-                }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute w-[80%] h-full p-6 border border-primary bg-[#ffffff29] rounded-3xl text-white shadow-lg"
               >
                 <img
@@ -75,6 +82,7 @@ export default function ProjectSection() {
           </AnimatePresence>
         </article>
 
+        {/* Next Button */}
         <nav>
           <button
             onClick={nextSlide}

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import PropTypes from "prop-types";
 const CustomTitle = ({ title }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.5 });
@@ -16,5 +17,7 @@ const CustomTitle = ({ title }) => {
     </motion.h1>
   );
 };
-
+CustomTitle.propTypes = {
+  title: PropTypes.array,
+};
 export default CustomTitle;

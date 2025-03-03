@@ -102,38 +102,15 @@ export default function MyWork() {
           </div>
         </div>
         {/* Navigation Buttons */}
-        <div className="flex justify-between mt-4">
+        <div className="flex justify-center mt-4 gap-8">
+          {" "}
+          {/* Added gap-8 for spacing */}
           <button
             onClick={prevSlide}
             className="mt-4 inline-block px-6 py-2 text-md font-semibold text-white bg-blue-500 rounded-lg bg-opacity-45 hover:bg-opacity-55 transition"
           >
             Previous
           </button>
-
-          {/* Client Repo Button */}
-          {/* {projects[currentIndex]?.clientRepo && (
-            <a
-              href={projects[currentIndex]?.clientRepo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-gray-600 hover:bg-gray-500 text-white rounded"
-            >
-              Client Repo
-            </a>
-          )} */}
-
-          {/* Server Repo Button */}
-          {/* {projects[currentIndex]?.serverRepo && (
-            <a
-              href={projects[currentIndex]?.serverRepo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-gray-600 hover:bg-gray-500 text-white rounded"
-            >
-              Server Repo
-            </a>
-          )} */}
-
           <button
             onClick={nextSlide}
             className="mt-4 inline-block px-6 py-2 text-md font-semibold text-white bg-green-400 rounded-lg bg-opacity-45 hover:bg-opacity-55 transition"

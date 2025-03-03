@@ -184,19 +184,25 @@ export const education = [
 
 // Project section
 export const projects = [
-  {
-    id: 1,
-    title: "Project 1",
-    description:
-      "A CRM (Customer Relationship Management) system is a software solution designed to help businesses manage interactions with customers, streamline processes, and improve customer relationships. It typically includes features for managing sales, marketing, customer support, and data analysis. By centralizing customer data, a CRM system allows businesses to improve communication, track customer activity, and make informed decisions",
-    imageUrl: "/src/assets/Screenshot - 2025-02-22T193226.693.png",
-  },
+  // {
+  //   id: 1,
+  //   title: "Project 1",
+  //   description:
+  //     "A CRM (Customer Relationship Management) system is a software solution designed to help businesses manage interactions with customers, streamline processes, and improve customer relationships. It typically includes features for managing sales, marketing, customer support, and data analysis. By centralizing customer data, a CRM system allows businesses to improve communication, track customer activity, and make informed decisions",
+  //   imageUrl: "/src/assets/Screenshot - 2025-02-22T193226.693.png",
+  //   link: "https://my-art-craft-project.web.app/",
+  //   clientRepo: "",
+  //   serverRepo: "",
+  // },
   {
     id: 2,
-    title: "Project 2",
+    title: "Art & Craft ",
     description:
       "It was my first experience in the real world It was my first experience in the real world",
-    imageUrl: "/src/assets/Gemini_Generated_Image_2v2pjn2v2pjn2v2p.jpeg",
+    images: [
+      "/src/assets/Screenshot 2025-03-03 110156.png",
+      "/src/assets/Screenshot 2025-03-03 110156.png",
+    ],
   },
   {
     id: 3,

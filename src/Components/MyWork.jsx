@@ -38,7 +38,7 @@ export default function MyWork() {
                 <img
                   src={image}
                   alt={`Project ${currentIndex + 1} - Image ${index + 1}`}
-                  className="w-full h-64 object-cover rounded-lg"
+                  className="w-full h-[500px]  rounded-t-lg mb-4"
                 />
               </SwiperSlide>
             ))}

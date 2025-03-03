@@ -201,7 +201,10 @@ export const projects = [
       "It was my first experience in the real world It was my first experience in the real world",
     images: [
       "/src/assets/Screenshot 2025-03-03 110156.png",
-      "/src/assets/Screenshot 2025-03-03 110156.png",
+      "/src/assets/Screenshot 2025-03-03 124400.png",
+      "/src/assets/Screenshot 2025-03-03 124508.png",
+      "/src/assets/Screenshot 2025-03-03 124620.png",
+      "/src/assets/Screenshot 2025-03-03 124717.png",
     ],
     link: "https://my-art-craft-project.web.app/",
     clientRepo:

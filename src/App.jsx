@@ -10,6 +10,7 @@ import ProjectSection from "./Components/ProjectSection";
 import ServicesSection from "./Components/ServicesSection";
 import SkillsSection from "./Components/SkillsSection";
 import ThreeBackground from "./Components/ThreeBackground";
+import MyWork from "./Components/MyWork";
 // import LoadingSpinner from "./Components/LoadingSpinner";
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
 
       <SkillsSection />
       <EducationAndExperience />
-      <ProjectSection />
+      {/* <ProjectSection /> */}
+      <MyWork />
       <ContactUs />
       <Footer />
       <BackToTop />

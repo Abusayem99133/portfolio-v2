@@ -23,7 +23,7 @@ export default function MyWork() {
       <CustomTitle className="mt-44" title={"My Work"} />
 
       <div className="flex flex-col items-center mt-44">
-        <div className="relative w-full max-w-2xl p-6 bg-gray-800 text-white rounded-lg shadow-lg">
+        <div className="relative container p-6 bg-gray-800 text-white rounded-lg shadow-lg">
           {/* Swiper.js for Image Slider */}
           <Swiper
             modules={[Navigation, Pagination]}
@@ -50,21 +50,96 @@ export default function MyWork() {
           </h2>
           <p className="text-sm mt-2">{projects[currentIndex]?.description}</p>
 
-          {/* Navigation Buttons */}
-          <div className="flex justify-between mt-4">
-            <button
+          {/* Live link /Github  Buttons  */}
+          <div className="flex justify-center mt-4 gap-4">
+            {/* <button
               onClick={prevSlide}
               className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded"
             >
               Previous
-            </button>
-            <button
+            </button> */}
+
+            {/* Client Repo Button */}
+            {projects[currentIndex]?.clientRepo && (
+              <a
+                href={projects[currentIndex]?.clientRepo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block px-6 py-2 text-md font-semibold text-white bg-primary rounded-lg bg-opacity-45 hover:bg-opacity-55 transition"
+              >
+                Client Repo
+              </a>
+            )}
+            {/* live link */}
+            {projects[currentIndex]?.link && (
+              <a
+                href={projects[currentIndex]?.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block px-6 py-2 text-md font-semibold text-black bg-white rounded-lg  hover:bg-opacity-55 transition"
+              >
+                Live preview
+              </a>
+            )}
+            {/* Server Repo Button */}
+            {projects[currentIndex]?.serverRepo && (
+              <a
+                href={projects[currentIndex]?.serverRepo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block px-6 py-2 text-md font-semibold text-white bg-primary rounded-lg bg-opacity-45 hover:bg-opacity-55 transition"
+              >
+                Server Repo
+              </a>
+            )}
+
+            {/* <button
               onClick={nextSlide}
               className="px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded"
             >
               Next
-            </button>
+            </button> */}
           </div>
+        </div>
+        {/* Navigation Buttons */}
+        <div className="flex justify-between mt-4">
+          <button
+            onClick={prevSlide}
+            className="mt-4 inline-block px-6 py-2 text-md font-semibold text-white bg-blue-500 rounded-lg bg-opacity-45 hover:bg-opacity-55 transition"
+          >
+            Previous
+          </button>
+
+          {/* Client Repo Button */}
+          {/* {projects[currentIndex]?.clientRepo && (
+            <a
+              href={projects[currentIndex]?.clientRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-gray-600 hover:bg-gray-500 text-white rounded"
+            >
+              Client Repo
+            </a>
+          )} */}
+
+          {/* Server Repo Button */}
+          {/* {projects[currentIndex]?.serverRepo && (
+            <a
+              href={projects[currentIndex]?.serverRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-gray-600 hover:bg-gray-500 text-white rounded"
+            >
+              Server Repo
+            </a>
+          )} */}
+
+          <button
+            onClick={nextSlide}
+            className="mt-4 inline-block px-6 py-2 text-md font-semibold text-white bg-green-400 rounded-lg bg-opacity-45 hover:bg-opacity-55 transition"
+          >
+            Next
+          </button>
         </div>
       </div>
     </>

@@ -203,6 +203,11 @@ export const projects = [
       "/src/assets/Screenshot 2025-03-03 110156.png",
       "/src/assets/Screenshot 2025-03-03 110156.png",
     ],
+    link: "https://my-art-craft-project.web.app/",
+    clientRepo:
+      "https://github.com/Abusayem99133/art-craft-client-site-project",
+    serverRepo:
+      "https://github.com/Abusayem99133/art---craft-server-site-project",
   },
   {
     id: 3,
